@@ -4,12 +4,13 @@ phases:
   install:
     runtime-versions:
       java: corretto8
+
   build:
     commands:
       - mvn clean install
-  post_build:
-    commands:
-      - echo Build Completed
+    post_build:
+      commands:
+        - echo Build Completed
 artifacts:
   files:
     - target/*.jar
