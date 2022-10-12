@@ -13,7 +13,7 @@ phases:
       - sudo yum install apache-maven -y
   build:
     commands:
-      - mvn install
+      - mvn clean install
   post_build:
     commands:
       - echo Build Completed
