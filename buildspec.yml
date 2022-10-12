@@ -11,7 +11,7 @@ phases:
       - sudo yum install -y gcc-c++ make
       - curl -sL https://rpm.nodesource.com/setup_12.x | sudo -E bash -
       - sudo yum install -y nodejs
-      - sudo npm install yarn -g
+      - npm install yarn -g
       - sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
       - sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
       - sudo yum install -y apache-maven
