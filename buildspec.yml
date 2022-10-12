@@ -14,9 +14,9 @@ phases:
   build:
     commands:
       - mvn -Pprod clean verify
-    post_build:
-      commands:
-        - echo Build Completed
+  post_build:
+    commands:
+      - echo Build Completed
 artifacts:
   files:
     - target/*.jar
