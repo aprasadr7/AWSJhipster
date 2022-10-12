@@ -7,7 +7,7 @@ phases:
 
   build:
     commands:
-      - mvn -Pprod clean verify
+      - mvn clean verify
     post_build:
       commands:
         - echo Build Completed
