@@ -12,7 +12,7 @@ phases:
       - curl -sL https://rpm.nodesource.com/setup_12.x | sudo -E bash -
       - sudo yum install -y nodejs
       - npm install yarn -g
-      - sudo wget sudo wget https://www-eu.apache.org/dist/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.tar.gz
+      - sudo wget https://downloads.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
       - sudo tar xf /tmp/apache-maven-*.tar.gz -C /opt
       - sudo ln -s /opt/apache-maven-3.8.1 /opt/maven
       - sudo nano /etc/profile.d/maven.sh
