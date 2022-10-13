@@ -17,6 +17,7 @@ phases:
       - sudo wget https://downloads.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
       - sudo tar xf /tmp/apache-maven-*.tar.gz -C /opt
       - sudo ln -s /opt/apache-maven-3.8.1 /opt/maven
+      - mvn -version
       - cd /home
       - mvn clean install
     post_build:
