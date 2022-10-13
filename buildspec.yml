@@ -12,6 +12,7 @@ phases:
       - curl -sL https://rpm.nodesource.com/setup_12.x | sudo -E bash -
       - sudo yum install -y nodejs
       - npm install yarn -g
+      - sudo npm install -g @angular/cli
       - sudo wget https://downloads.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
       - sudo tar xf apache-maven-*.tar.gz -C /opt
       - sudo ln -s /opt/apache-maven-3.8.1 /opt/maven
