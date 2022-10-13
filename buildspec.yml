@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto8
+      java: corretto11
 
   build:
     commands:
@@ -12,9 +12,12 @@ phases:
       - curl -sL https://rpm.nodesource.com/setup_12.x | sudo -E bash -
       - sudo yum install -y nodejs
       - npm install yarn -g
-      - sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
-      - sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
-      - sudo yum install -y apache-maven
+      - sudo wget sudo wget https://www-eu.apache.org/dist/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.tar.gz
+      - sudo tar xf /tmp/apache-maven-*.tar.gz -C /opt
+      - sudo ln -s /opt/apache-maven-3.8.1 /opt/maven
+      - sudo nano /etc/profile.d/maven.sh
+      - sudo chmod +x /etc/profile.d/maven.sh
+      - source /etc/profile.d/maven.sh
       - mvn clean install
     post_build:
       commands:
