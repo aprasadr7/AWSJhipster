@@ -16,9 +16,6 @@ phases:
       - sudo wget https://downloads.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
       - sudo tar xf /tmp/apache-maven-*.tar.gz -C /opt
       - sudo ln -s /opt/apache-maven-3.8.1 /opt/maven
-      - sudo nano /etc/profile.d/maven.sh
-      - sudo chmod +x /etc/profile.d/maven.sh
-      - source /etc/profile.d/maven.sh
       - cd /home/ec2-user/jhipster
       - mvn clean install
     post_build:
